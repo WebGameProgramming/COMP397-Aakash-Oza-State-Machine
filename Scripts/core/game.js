@@ -12,6 +12,7 @@ function init() {
     main();
 }
 function gameLoop(event) {
+    hellolable.rotation += 5;
     stage.update();
 }
 function main() {
@@ -20,7 +21,7 @@ function main() {
     hellolable.regX = hellolable.getMeasuredWidth() * 0.5;
     hellolable.regY = hellolable.getMeasuredHeight() * 0.5;
     hellolable.x = 320;
-    hellolable.y = 480;
+    hellolable.y = 240;
     stage.addChild(hellolable);
 }
 /*
