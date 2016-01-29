@@ -1,5 +1,61 @@
 ﻿///<reference path="_reference.ts"/>
 // GLOBAL GAME FRAMEWORK VARIABLES
+//global variables
+var canvas:HTMLElement = document.getElementById("canvas");
+var stage:createjs.Stage;
+
+var hellolable:createjs.Text;
+function init():void{
+    canvas=document.getElementById("canvas");
+    stage= new createjs.Stage(canvas);
+    createjs.Ticker.setFPS(100); //setting the fram rate of 100
+    createjs.Ticker.on("tick",gameLoop,this);
+    main();
+}
+function gameLoop(event:createjs.Event):void{
+    stage.update();
+    
+}
+
+function main(){
+    console.log("game started");
+    hellolable=new createjs.Text("hello world","60px Consolas","#04gf00");
+    stage.addChild(hellolable);
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var canvas: HTMLElement;
 var stage: createjs.Stage;
 var stats: Stats;
@@ -70,4 +126,4 @@ function changeState(): void {
 
     stateFunction();
 }
- 
+ */
