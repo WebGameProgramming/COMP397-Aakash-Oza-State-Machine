@@ -20,6 +20,11 @@ function gameLoop(event:createjs.Event):void{
 function main(){
     console.log("game started");
     hellolable=new createjs.Text("hello world","60px Consolas","#04gf00");
+    hellolable.regX=hellolable.getMeasuredWidth()*0.5;
+    hellolable.regY=hellolable.getMeasuredHeight()*0.5;
+    hellolable.x=320;
+    hellolable.y=480;
+    
     stage.addChild(hellolable);
     
     
